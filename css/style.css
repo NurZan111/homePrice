@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Light Regular'), local('BebasNeueLight'),
+        url('../fonts/BebasNeueLight.woff2') format('woff2'),
+        url('../fonts/BebasNeueLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    background-color: #635854;
+    border-bottom: 4px solid #3596F5;
+    padding: 12px 0;
+}
+.navbar{
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar_menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    text-align: center;
+}
+.navbar_item{
+    margin: 0 40px;
+}
+.navbar_link{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar_contacts{
+    text-align: right;
+}
+.navbar_text{
+    display: block;
+    color: #fff;
+    margin-bottom: 4px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+.navbar_phone{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
+}
+.main{
+    max-width: 1280px;
+    margin: auto;
+    padding-top: 54px;
+    padding-bottom: 54px;
+    display: flex;
+}
+.home_image path{
+    opacity: 0;
+}
+.home_image path:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+path.current_floor{
+    opacity: 1;
+}
+.main_info{
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.counter_group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.counter_button{
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.counter_arrow_down{
+    transform: rotateX(180deg);
+}
+.main_title{
+    font-family: 'Bebas Neue';
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 37px;
+    color:#635854;
+}
+.floor_counter{
+    font-family: 'Bebas Neue';
+    font-weight: 700;
+    font-size: 124px;
+    color:#635854;
+}
+.button_primary{
+    font-size: 16px;
+    color: #fff;
+    background-color: #3596F5;
+    border-radius: 6px;
+    padding: 16px 36px;
+    border: none;
+    cursor: pointer;
+}
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s;
+}
+.is_open{
+    opacity: 1;
+    transform: scale(1);
+}
+.modal_dialog{
+    min-height: 565px;
+    max-width: 1000px;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: transform 0.5s, opacity 0.5s;
+    transition-delay: 0.5s;
+}
+.is_open > .modal_dialog{
+    opacity: 1;
+    transform: translateY(0);
+}
+.modal_image{
+    background-color: #ebebeb;
+    width: 60%;
+    text-align: center;
+    padding: 50px;
+}
+.modal_title{
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 900;
+    font-family: 'Bebas Neue';
+}
+.modal_info{
+    width: 40%;
+    padding: 50px 40px;
+}
+.flat_list{
+    padding: 0;
+    list-style: none;
+    margin-top: 55px;
+}
+.flat_item{
+    margin-bottom: 10px;
+}
+.flat_link{
+    font-size: 16px;
+    line-height: 19px;
+    color: #635854;
+    text-decoration: none;
+}
+.flat_link:hover{
+    cursor: pointer;
+    color: #3596F5;
+    text-decoration: underline;
+}
+.modol_alert{
+    font-family: 'Roboto', sans-serif;
+    color:#635854;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 50px;
+}
+.button_close{
+    position:absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: #fff;
+}
+.flats path{
+    opacity: 0;
+}
+.flats path:hover{
+    opacity: 1;
+}
